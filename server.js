@@ -60,6 +60,7 @@ cloudinary.config({
   api_key: process.env.API_KEY,
   api_secret: process.env.API_SECRET,
 });
+console.log(process.env.CLOUD_NAME, process.env.API_KEY, process.env.API_SECRET, process.env.UPLOAD_PRESET)
 cloudinaryUpload = (file) => {
   return cloudinary.uploader.upload(file, {
     upload_preset: process.env.UPLOAD_PRESET,
